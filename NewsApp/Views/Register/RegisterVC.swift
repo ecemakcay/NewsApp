@@ -16,6 +16,7 @@ class RegisterVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground()
     }
     
     @IBAction func registerBtnAct(_ sender: Any) {

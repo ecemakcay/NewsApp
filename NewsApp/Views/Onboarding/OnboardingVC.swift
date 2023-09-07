@@ -26,7 +26,7 @@ class OnboardingVC:UIViewController{
             OnboardingSlide(title: "Personalize Your Profile", image: "slide3" )
                ]
                
-               pageControl.numberOfPages = slides.count
+            pageControl.numberOfPages = slides.count
         
     }
     
@@ -39,8 +39,8 @@ class OnboardingVC:UIViewController{
     @IBAction func nextBtnAct(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
             UserDefaults.standard.hasOnboarded = true
-            let storyboard = UIStoryboard(name: "HomePageVC", bundle: nil) 
-            if let controller = storyboard.instantiateViewController(withIdentifier: "HomePageVC") as? HomePageVC {
+            let storyboard = UIStoryboard(name: "RegisterVC", bundle: nil)
+            if let controller = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC {
                 controller.modalPresentationStyle = .fullScreen
                 controller.modalTransitionStyle = .coverVertical
                 navigationController?.pushViewController(controller, animated: true)
