@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if defaults.bool(forKey: "hasOnboarded") {
             // Kullanıcı daha önce onboarding ekranını gördü, direkt ana ekrana geç.
-            let storyboard = UIStoryboard(name: "HomePageVC", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "HomePageVC") as? HomePageVC {
+            let storyboard = UIStoryboard(name: "RegisterVC", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC {
                 window.rootViewController = UINavigationController(rootViewController: vc)
             }
         } else {
