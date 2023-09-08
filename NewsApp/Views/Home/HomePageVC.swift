@@ -12,6 +12,11 @@ class HomePageVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
+    
+}
+
+final class MyTabbarController: UITabBarController {
     
 }

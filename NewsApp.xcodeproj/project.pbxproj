@@ -12,6 +12,10 @@
 		DE9021BC2AA9C09500CD53BB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9021BB2AA9C09500CD53BB /* RegisterViewModel.swift */; };
 		DE9021BF2AA9C18200CD53BB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9021BE2AA9C18200CD53BB /* RegisterVC.swift */; };
 		DE9021C12AA9C18F00CD53BB /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9021C02AA9C18F00CD53BB /* RegisterVC.storyboard */; };
+		DE9D6C8D2AAAF8B9005C7D14 /* ProfilePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D6C8C2AAAF8B9005C7D14 /* ProfilePageVC.swift */; };
+		DE9D6C8F2AAAF8F0005C7D14 /* FavoritePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D6C8E2AAAF8F0005C7D14 /* FavoritePageVC.swift */; };
+		DE9D6C912AAAF91E005C7D14 /* ProfilePageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9D6C902AAAF91E005C7D14 /* ProfilePageVC.storyboard */; };
+		DE9D6C932AAAF950005C7D14 /* FavoritePageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9D6C922AAAF950005C7D14 /* FavoritePageVC.storyboard */; };
 		DEABAA002AA871B30082DADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEABA9FF2AA871B30082DADB /* AppDelegate.swift */; };
 		DEABAA022AA871B30082DADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEABAA012AA871B30082DADB /* SceneDelegate.swift */; };
 		DEABAA092AA871B40082DADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEABAA082AA871B40082DADB /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		DE9021BB2AA9C09500CD53BB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		DE9021BE2AA9C18200CD53BB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		DE9021C02AA9C18F00CD53BB /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
+		DE9D6C8C2AAAF8B9005C7D14 /* ProfilePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageVC.swift; sourceTree = "<group>"; };
+		DE9D6C8E2AAAF8F0005C7D14 /* FavoritePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePageVC.swift; sourceTree = "<group>"; };
+		DE9D6C902AAAF91E005C7D14 /* ProfilePageVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePageVC.storyboard; sourceTree = "<group>"; };
+		DE9D6C922AAAF950005C7D14 /* FavoritePageVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritePageVC.storyboard; sourceTree = "<group>"; };
 		DEABA9FC2AA871B30082DADB /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEABA9FF2AA871B30082DADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEABAA012AA871B30082DADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +91,24 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		DE9D6C8A2AAAF89B005C7D14 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D6C8E2AAAF8F0005C7D14 /* FavoritePageVC.swift */,
+				DE9D6C922AAAF950005C7D14 /* FavoritePageVC.storyboard */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		DE9D6C8B2AAAF8A4005C7D14 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D6C8C2AAAF8B9005C7D14 /* ProfilePageVC.swift */,
+				DE9D6C902AAAF91E005C7D14 /* ProfilePageVC.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		DEABA9F32AA871B30082DADB = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +145,8 @@
 		DEABAA132AA871EF0082DADB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE9D6C8B2AAAF8A4005C7D14 /* Profile */,
+				DE9D6C8A2AAAF89B005C7D14 /* Favorite */,
 				DEB91C432AA9FA4900C359FF /* Login */,
 				DE9021BD2AA9C16900CD53BB /* Register */,
 				DEABAA152AA872040082DADB /* Home */,
@@ -237,11 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9021C12AA9C18F00CD53BB /* RegisterVC.storyboard in Resources */,
+				DE9D6C932AAAF950005C7D14 /* FavoritePageVC.storyboard in Resources */,
 				DEABAA0C2AA871B40082DADB /* LaunchScreen.storyboard in Resources */,
 				DEABAA172AA8724C0082DADB /* OnboardingVC.storyboard in Resources */,
 				DE9021B82AA9997300CD53BB /* GoogleService-Info.plist in Resources */,
 				DEB91C472AA9FA6900C359FF /* LoginVC.storyboard in Resources */,
 				DEABAA092AA871B40082DADB /* Assets.xcassets in Resources */,
+				DE9D6C912AAAF91E005C7D14 /* ProfilePageVC.storyboard in Resources */,
 				DEABAA272AA892AF0082DADB /* HomePageVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,12 +287,14 @@
 				DEABAA1D2AA872850082DADB /* HomePageVC.swift in Sources */,
 				DEABAA002AA871B30082DADB /* AppDelegate.swift in Sources */,
 				DEABAA192AA8725C0082DADB /* OnboardingVC.swift in Sources */,
+				DE9D6C8D2AAAF8B9005C7D14 /* ProfilePageVC.swift in Sources */,
 				DE9021BC2AA9C09500CD53BB /* RegisterViewModel.swift in Sources */,
 				DEB91C452AA9FA5B00C359FF /* LoginVC.swift in Sources */,
 				DEABAA022AA871B30082DADB /* SceneDelegate.swift in Sources */,
 				DEABAA222AA8732D0082DADB /* OnboardingSlide.swift in Sources */,
 				DEB91C4B2AAA128B00C359FF /* LoginViewModel.swift in Sources */,
 				DE9021BF2AA9C18200CD53BB /* RegisterVC.swift in Sources */,
+				DE9D6C8F2AAAF8F0005C7D14 /* FavoritePageVC.swift in Sources */,
 				DEABAA1B2AA872770082DADB /* OnboardingCollectionViewCell.swift in Sources */,
 				DEABAA252AA87BB80082DADB /* UserDefaults+Extension.swift in Sources */,
 			);
