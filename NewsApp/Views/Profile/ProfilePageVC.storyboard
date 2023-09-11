@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController restorationIdentifier="ProfilePageVC" storyboardIdentifier="ProfilePageVC" id="Y6W-OH-hqX" customClass="ProfilePageVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xAw-w4-dBk"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" selectedImage="user_selected" id="xAw-w4-dBk"/>
                     <navigationItem key="navigationItem" id="hRb-Vp-sdd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -46,6 +46,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="user" width="32" height="32"/>
+        <image name="user_selected" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

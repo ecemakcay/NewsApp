@@ -9,7 +9,8 @@ import UIKit
 
 class SecondTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var tableViewBox: TableViewCellBox!
+
+    @IBOutlet weak var tableViewBox: TableViewBox!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,11 +24,9 @@ class SecondTableViewCell: UITableViewCell {
     }
 
     private func setupTableViewCellBox() {
-            // TableViewCellBox'u hücreye ekleyin ve ayarlamalarını yapın
             tableViewBox.frame = contentView.bounds
             contentView.addSubview(tableViewBox)
 
-            // Daha fazla özelleştirme burada yapılabilir
         }
 }
 

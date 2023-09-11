@@ -20,8 +20,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
      private func setupCollectionViewBox() {
         
          collectionViewBox.frame = contentView.bounds
-         contentView.addSubview(collectionViewBox)
-
       
      }
  }

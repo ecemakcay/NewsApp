@@ -68,7 +68,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionView" destination="KS2-Wo-bv3" id="sEV-0v-9al"/>
+                                            <outlet property="collectionView" destination="KS2-Wo-bv3" id="jO3-Ea-N1z"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SecondTableViewCell" rowHeight="164" id="IJa-4z-8M7" customClass="SecondTableViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -78,7 +78,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" restorationIdentifier="TableViewCellbox" translatesAutoresizingMaskIntoConstraints="NO" id="VoC-ot-Tek" customClass="TableViewCellBox" customModule="NewsApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" restorationIdentifier="TableViewBox" translatesAutoresizingMaskIntoConstraints="NO" id="VoC-ot-Tek" customClass="TableViewBox" customModule="NewsApp" customModuleProvider="target">
                                                     <rect key="frame" x="28" y="19" width="353" height="126"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
@@ -91,7 +91,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="tableViewBox" destination="VoC-ot-Tek" id="szK-p9-7SP"/>
+                                            <outlet property="tableViewBox" destination="VoC-ot-Tek" id="Als-xp-HbS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

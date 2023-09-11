@@ -36,8 +36,8 @@
 		DEBA502F2AAEDD11005EAE29 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA502E2AAEDD11005EAE29 /* SecondTableViewCell.swift */; };
 		DEBA50322AAEF079005EAE29 /* CollectionViewBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEBA50312AAEF079005EAE29 /* CollectionViewBox.xib */; };
 		DEBA50342AAEF8B8005EAE29 /* CollectionViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA50332AAEF8B8005EAE29 /* CollectionViewBox.swift */; };
-		DEBA50362AAEFCDE005EAE29 /* TableViewCellBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEBA50352AAEFCDE005EAE29 /* TableViewCellBox.xib */; };
-		DEBA50382AAEFCF5005EAE29 /* TableViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA50372AAEFCF5005EAE29 /* TableViewCellBox.swift */; };
+		DEBA503B2AAF39A0005EAE29 /* TableViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA503A2AAF39A0005EAE29 /* TableViewBox.swift */; };
+		DEBA503D2AAF39D0005EAE29 /* TableViewBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEBA503C2AAF39D0005EAE29 /* TableViewBox.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +71,8 @@
 		DEBA502E2AAEDD11005EAE29 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
 		DEBA50312AAEF079005EAE29 /* CollectionViewBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewBox.xib; sourceTree = "<group>"; };
 		DEBA50332AAEF8B8005EAE29 /* CollectionViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBox.swift; sourceTree = "<group>"; };
-		DEBA50352AAEFCDE005EAE29 /* TableViewCellBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellBox.xib; sourceTree = "<group>"; };
-		DEBA50372AAEFCF5005EAE29 /* TableViewCellBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBox.swift; sourceTree = "<group>"; };
+		DEBA503A2AAF39A0005EAE29 /* TableViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewBox.swift; sourceTree = "<group>"; };
+		DEBA503C2AAF39D0005EAE29 /* TableViewBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewBox.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +239,8 @@
 			children = (
 				DEBA50312AAEF079005EAE29 /* CollectionViewBox.xib */,
 				DEBA50332AAEF8B8005EAE29 /* CollectionViewBox.swift */,
-				DEBA50352AAEFCDE005EAE29 /* TableViewCellBox.xib */,
-				DEBA50372AAEFCF5005EAE29 /* TableViewCellBox.swift */,
+				DEBA503A2AAF39A0005EAE29 /* TableViewBox.swift */,
+				DEBA503C2AAF39D0005EAE29 /* TableViewBox.xib */,
 			);
 			path = Box;
 			sourceTree = "<group>";
@@ -312,8 +312,8 @@
 				DE9021C12AA9C18F00CD53BB /* RegisterVC.storyboard in Resources */,
 				DE9D6C932AAAF950005C7D14 /* FavoritePageVC.storyboard in Resources */,
 				DEABAA0C2AA871B40082DADB /* LaunchScreen.storyboard in Resources */,
+				DEBA503D2AAF39D0005EAE29 /* TableViewBox.xib in Resources */,
 				DEABAA172AA8724C0082DADB /* OnboardingVC.storyboard in Resources */,
-				DEBA50362AAEFCDE005EAE29 /* TableViewCellBox.xib in Resources */,
 				DE9021B82AA9997300CD53BB /* GoogleService-Info.plist in Resources */,
 				DEB91C472AA9FA6900C359FF /* LoginVC.storyboard in Resources */,
 				DEBA50322AAEF079005EAE29 /* CollectionViewBox.xib in Resources */,
@@ -334,10 +334,10 @@
 				DEABAA1D2AA872850082DADB /* HomePageVC.swift in Sources */,
 				DEABAA002AA871B30082DADB /* AppDelegate.swift in Sources */,
 				DEABAA192AA8725C0082DADB /* OnboardingVC.swift in Sources */,
-				DEBA50382AAEFCF5005EAE29 /* TableViewCellBox.swift in Sources */,
 				DEBA50342AAEF8B8005EAE29 /* CollectionViewBox.swift in Sources */,
 				DE9D6C8D2AAAF8B9005C7D14 /* ProfilePageVC.swift in Sources */,
 				DE9021BC2AA9C09500CD53BB /* RegisterViewModel.swift in Sources */,
+				DEBA503B2AAF39A0005EAE29 /* TableViewBox.swift in Sources */,
 				DE8651B82AAE44A0002A8189 /* FirstTableViewCell.swift in Sources */,
 				DEBA502D2AAEDC92005EAE29 /* HomeCollectionViewCell.swift in Sources */,
 				DEB91C452AA9FA5B00C359FF /* LoginVC.swift in Sources */,

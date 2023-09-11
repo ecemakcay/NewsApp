@@ -10,15 +10,29 @@ import UIKit
 class FirstTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        prepareCollectionView()
+        
+        
+
+        let design = UICollectionViewFlowLayout()
+        design.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = design
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func prepareCollectionView(){
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.reloadData()
     }
 
 }

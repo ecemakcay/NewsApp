@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Favorite-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController restorationIdentifier="FavoritePageVC" storyboardIdentifier="FavoritePageVC" id="Y6W-OH-hqX" customClass="FavoritePageVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DBs-fm-gt2"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="heart" selectedImage="heart_selected" id="DBs-fm-gt2"/>
                     <navigationItem key="navigationItem" id="Rdh-Up-7jx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -42,10 +42,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKf-7O-wlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37.404580152671755" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="62" y="-28"/>
         </scene>
     </scenes>
     <resources>
+        <image name="heart" width="32" height="32"/>
+        <image name="heart_selected" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

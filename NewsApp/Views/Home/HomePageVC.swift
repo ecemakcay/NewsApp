@@ -40,12 +40,13 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           if indexPath.row == 0 {
-              
+           switch indexPath.row {
+           case 0:
                let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
                
                return cell
-           } else {
+               
+           default:
                
                let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTableViewCell", for: indexPath) as! SecondTableViewCell
               

@@ -8,10 +8,10 @@
 import UIKit
 
 class CollectionViewBox: UIView{
-    @IBOutlet weak var collectionImageView: UIImageView!
+   
+    @IBOutlet weak var collectionViewImage: UIImageView!
     
-    @IBOutlet weak var collectionTitleLabel: UILabel!
-    
+    @IBOutlet weak var collectionViewTitle: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
