@@ -17,6 +17,10 @@ class SecondTableViewCell: UITableViewCell {
         setupTableViewCellBox()
     }
 
+    func configure(with article: Article) {
+           tableViewBox.configure(with: article)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -27,7 +31,7 @@ class SecondTableViewCell: UITableViewCell {
             tableViewBox.frame = contentView.bounds
             contentView.addSubview(tableViewBox)
 
-        }
+    }
 }
 
 

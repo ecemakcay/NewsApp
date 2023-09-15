@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CollectionViewBox: UIView{
+class CollectionViewBox: UIView {
    
     @IBOutlet weak var collectionViewImage: UIImageView!
-    
     @IBOutlet weak var collectionViewTitle: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -29,4 +29,29 @@ class CollectionViewBox: UIView{
             addSubview(viewForXib)
         }
     }
+    
+    func configure(with article: Article) {
+        collectionViewTitle.text = article.title
+        loadImage(from: article.urlToImage)
+        
+    }
+    
+    private func loadImage(from urlString: String?) {
+            guard let urlString = urlString, let url = URL(string: urlString) else {
+                // URL geçersiz veya boş
+                return
+            }
+            
+            URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+                guard let data = data, error == nil, let image = UIImage(data: data) else {
+                    // Resim alınamadı
+                    return
+                }
+                
+                // Resmi ana thread üzerinde güncelle
+                DispatchQueue.main.async {
+                    self?.collectionViewImage.image = image
+                }
+            }.resume()
+        }
 }

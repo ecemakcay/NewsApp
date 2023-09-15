@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1B0BCC2AB1E6880044761C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B0BCB2AB1E6880044761C /* NetworkManager.swift */; };
+		DE1B0BCE2AB1E6CB0044761C /* EndpointHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B0BCD2AB1E6CB0044761C /* EndpointHelpers.swift */; };
+		DE1B0BD22AB1F0660044761C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B0BD12AB1F0660044761C /* Article.swift */; };
+		DE1B0BD42AB1F1F00044761C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B0BD32AB1F1F00044761C /* HomeViewModel.swift */; };
 		DE8651B82AAE44A0002A8189 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8651B72AAE44A0002A8189 /* FirstTableViewCell.swift */; };
 		DE9021B62AA9971000CD53BB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DE9021B52AA9971000CD53BB /* FirebaseAuth */; };
 		DE9021B82AA9997300CD53BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE9021B72AA9997300CD53BB /* GoogleService-Info.plist */; };
@@ -38,9 +42,14 @@
 		DEBA50342AAEF8B8005EAE29 /* CollectionViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA50332AAEF8B8005EAE29 /* CollectionViewBox.swift */; };
 		DEBA503B2AAF39A0005EAE29 /* TableViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA503A2AAF39A0005EAE29 /* TableViewBox.swift */; };
 		DEBA503D2AAF39D0005EAE29 /* TableViewBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEBA503C2AAF39D0005EAE29 /* TableViewBox.xib */; };
+		DEBB1B9E2AB455D0006C2AB6 /* NewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB1B9D2AB455D0006C2AB6 /* NewResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE1B0BCB2AB1E6880044761C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DE1B0BCD2AB1E6CB0044761C /* EndpointHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelpers.swift; sourceTree = "<group>"; };
+		DE1B0BD12AB1F0660044761C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		DE1B0BD32AB1F1F00044761C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DE8651B72AAE44A0002A8189 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		DE9021B72AA9997300CD53BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE9021BB2AA9C09500CD53BB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +82,7 @@
 		DEBA50332AAEF8B8005EAE29 /* CollectionViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBox.swift; sourceTree = "<group>"; };
 		DEBA503A2AAF39A0005EAE29 /* TableViewBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewBox.swift; sourceTree = "<group>"; };
 		DEBA503C2AAF39D0005EAE29 /* TableViewBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewBox.xib; sourceTree = "<group>"; };
+		DEBB1B9D2AB455D0006C2AB6 /* NewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE1B0BCA2AB1E66C0044761C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DE1B0BCD2AB1E6CB0044761C /* EndpointHelpers.swift */,
+				DE1B0BCB2AB1E6880044761C /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		DE8651B62AAE4436002A8189 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 			children = (
 				DE9021BB2AA9C09500CD53BB /* RegisterViewModel.swift */,
 				DEB91C4A2AAA128B00C359FF /* LoginViewModel.swift */,
+				DE1B0BD32AB1F1F00044761C /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -162,6 +182,7 @@
 		DEABA9FE2AA871B30082DADB /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE1B0BCA2AB1E66C0044761C /* Service */,
 				DE9021B92AA9C04900CD53BB /* ViewModels */,
 				DEABAA232AA87B970082DADB /* Extensions */,
 				DEABAA202AA873190082DADB /* Models */,
@@ -212,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				DEABAA212AA8732D0082DADB /* OnboardingSlide.swift */,
+				DE1B0BD12AB1F0660044761C /* Article.swift */,
+				DEBB1B9D2AB455D0006C2AB6 /* NewResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +355,7 @@
 			files = (
 				DEB91C492AAA05C300C359FF /* UIView+Extension.swift in Sources */,
 				DEABAA1D2AA872850082DADB /* HomePageVC.swift in Sources */,
+				DE1B0BD22AB1F0660044761C /* Article.swift in Sources */,
 				DEABAA002AA871B30082DADB /* AppDelegate.swift in Sources */,
 				DEABAA192AA8725C0082DADB /* OnboardingVC.swift in Sources */,
 				DEBA50342AAEF8B8005EAE29 /* CollectionViewBox.swift in Sources */,
@@ -340,12 +364,16 @@
 				DEBA503B2AAF39A0005EAE29 /* TableViewBox.swift in Sources */,
 				DE8651B82AAE44A0002A8189 /* FirstTableViewCell.swift in Sources */,
 				DEBA502D2AAEDC92005EAE29 /* HomeCollectionViewCell.swift in Sources */,
+				DE1B0BCE2AB1E6CB0044761C /* EndpointHelpers.swift in Sources */,
 				DEB91C452AA9FA5B00C359FF /* LoginVC.swift in Sources */,
+				DEBB1B9E2AB455D0006C2AB6 /* NewResponse.swift in Sources */,
 				DEABAA022AA871B30082DADB /* SceneDelegate.swift in Sources */,
+				DE1B0BCC2AB1E6880044761C /* NetworkManager.swift in Sources */,
 				DEABAA222AA8732D0082DADB /* OnboardingSlide.swift in Sources */,
 				DEBA502F2AAEDD11005EAE29 /* SecondTableViewCell.swift in Sources */,
 				DEB91C4B2AAA128B00C359FF /* LoginViewModel.swift in Sources */,
 				DE9021BF2AA9C18200CD53BB /* RegisterVC.swift in Sources */,
+				DE1B0BD42AB1F1F00044761C /* HomeViewModel.swift in Sources */,
 				DE9D6C8F2AAAF8F0005C7D14 /* FavoritePageVC.swift in Sources */,
 				DEABAA1B2AA872770082DADB /* OnboardingCollectionViewCell.swift in Sources */,
 				DEABAA252AA87BB80082DADB /* UserDefaults+Extension.swift in Sources */,
