@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,42 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-rG-hdf">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="G2w-rG-hdf">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="5fq-rA-vbj" id="2fl-59-5Zm"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="478-qI-ycf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="478-qI-ycf">
                                 <rect key="frame" x="0.0" y="159" width="393" height="610"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FirstTableViewCell" rowHeight="312" id="Ti8-rG-pvq" customClass="FirstTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="312"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FirstTableViewCell" rowHeight="256" id="Ti8-rG-pvq" customClass="FirstTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="256"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ti8-rG-pvq" id="vFw-PR-HWB">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="312"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KS2-Wo-bv3">
-                                                    <rect key="frame" x="20" y="8" width="353" height="296"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <rect key="frame" x="20" y="8" width="353" height="240"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQa-vz-vdL">
-                                                        <size key="itemSize" width="298" height="284"/>
+                                                        <size key="itemSize" width="261" height="203"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="yW2-Eo-xhp" customClass="HomeCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
-                                                            <rect key="frame" x="27.666666666666668" y="0.0" width="298" height="284"/>
+                                                            <rect key="frame" x="46" y="0.0" width="261" height="203"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="arU-pZ-wtc" customClass="CollectionViewBox" customModule="NewsApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="298" height="284"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="arU-pZ-wtc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="261" height="203"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </collectionViewCellContentView>
-                                                            <size key="customSize" width="298" height="284"/>
+                                                            <size key="customSize" width="261" height="203"/>
                                                             <connections>
                                                                 <outlet property="collectionViewBox" destination="arU-pZ-wtc" id="8jq-Fv-Dqy"/>
                                                             </connections>
@@ -60,6 +60,7 @@
                                                     </cells>
                                                 </collectionView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="KS2-Wo-bv3" secondAttribute="bottom" constant="8" id="5DM-Ni-xB7"/>
                                                 <constraint firstAttribute="trailing" secondItem="KS2-Wo-bv3" secondAttribute="trailing" constant="20" symbolic="YES" id="PgS-e1-Rw1"/>
@@ -67,12 +68,13 @@
                                                 <constraint firstItem="KS2-Wo-bv3" firstAttribute="top" secondItem="vFw-PR-HWB" secondAttribute="top" constant="8" id="wlJ-uJ-LAa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="collectionView" destination="KS2-Wo-bv3" id="jO3-Ea-N1z"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SecondTableViewCell" rowHeight="219" id="IJa-4z-8M7" customClass="SecondTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="362" width="393" height="219"/>
+                                        <rect key="frame" x="0.0" y="306" width="393" height="219"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IJa-4z-8M7" id="XK0-sx-gZP">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="219"/>
@@ -80,9 +82,10 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" restorationIdentifier="TableViewBox" translatesAutoresizingMaskIntoConstraints="NO" id="VoC-ot-Tek" customClass="TableViewBox" customModule="NewsApp" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="11" width="353" height="197"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="VoC-ot-Tek" firstAttribute="top" secondItem="XK0-sx-gZP" secondAttribute="topMargin" id="VMq-BG-nac"/>
                                                 <constraint firstItem="VoC-ot-Tek" firstAttribute="leading" secondItem="XK0-sx-gZP" secondAttribute="leadingMargin" id="YMF-po-pQ3"/>
@@ -90,6 +93,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="VoC-ot-Tek" secondAttribute="bottom" id="p4v-G2-xHs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="tableViewBox" destination="VoC-ot-Tek" id="Als-xp-HbS"/>
                                         </connections>
@@ -98,7 +102,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mcq-Kx-I0s"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.10588235294117647" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="478-qI-ycf" firstAttribute="leading" secondItem="Mcq-Kx-I0s" secondAttribute="leading" id="9Nc-Xs-tsS"/>
                             <constraint firstItem="478-qI-ycf" firstAttribute="top" secondItem="G2w-rG-hdf" secondAttribute="bottom" id="9le-h4-mpJ"/>
@@ -123,7 +127,6 @@
         <!--Navigation Controller-->
         <scene sceneID="XHa-gj-56v">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Crp-me-xKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" id="2rj-Ca-6RT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehO-0g-f08">
@@ -135,6 +138,7 @@
                         <segue destination="4Rt-S7-xUp" kind="relationship" relationship="rootViewController" id="lnB-fq-pdO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crp-me-xKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5136.6412213740459" y="38.732394366197184"/>
         </scene>
@@ -187,8 +191,5 @@
         <image name="home_selected" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
         <image name="user_selected" width="32" height="32"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

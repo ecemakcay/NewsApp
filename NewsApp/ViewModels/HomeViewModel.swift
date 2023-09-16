@@ -10,8 +10,8 @@ class HomeViewModel {
     var onDataUpdate: (() -> Void)?
     
     
-    func fetchTopHeadlines(country: String) {
-        let endpoint = Endpoint.getTopHeadlines(country: country)
+    func fetchTopHeadlines() {
+        let endpoint = Endpoint.getTopHeadlines(country: "tr")
         networkManager.fetchData(from: endpoint, responseType: NewsResponse.self) { [weak self] result in
             switch result {
             case .success(let response):

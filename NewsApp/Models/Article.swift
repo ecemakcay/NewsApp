@@ -14,14 +14,16 @@ struct Article: Codable {
     var url: String
     var urlToImage: String?
     var publishedAt: String
+    var author: String?
     
     
-    init(title: String, description: String?, url: String, urlToImage: String? = nil, publishedAt: String) {
+    init(title: String, description: String?, url: String, urlToImage: String? = nil, publishedAt: String, author: String?) {
         self.title = title
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
         self.publishedAt = publishedAt
+        self.author = author
     }
 }
 

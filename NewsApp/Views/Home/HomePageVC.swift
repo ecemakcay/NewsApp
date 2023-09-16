@@ -18,10 +18,11 @@ class HomePageVC: UIViewController{
         
         prepareSearchBar()
         prepareTableView()
+        configureSearchBarColors()
         
         
-        viewModel.fetchEverything(query: "bitcoin")
-        viewModel.fetchTopHeadlines(country: "us")
+        viewModel.fetchEverything(query: "general")
+        viewModel.fetchTopHeadlines()
 
                 
         // Verilerin güncellenmesini dinlemek için
@@ -41,10 +42,23 @@ class HomePageVC: UIViewController{
         homeTableView.dataSource = self
     }
     
+    func configureSearchBarColors() {
+        if let searchTextField = homeSearchBar?.searchTextField {
+            searchTextField.textColor = .white
+            searchTextField.tintColor = .white
+            
+            if let leftView = searchTextField.leftView as? UIImageView {
+                leftView.image = leftView.image?.withRenderingMode(.alwaysTemplate)
+                leftView.tintColor = UIColor(named: "color5")
+            }
+            searchTextField.backgroundColor = UIColor(named: "color3")
+        }
+    }
+    
 }
 
 final class MyTabbarController: UITabBarController {
-    
+  
 }
 
 extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
@@ -65,10 +79,30 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "DetailPageVC", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailPageVC") as? DetailPageVC {
+            detailVC.article = viewModel.everything[indexPath.row - 1] // Haberi DetailPageVC'ye iletebilirsiniz
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        switch indexPath.row{
+        case 0:
+            return 500
+    
+        default:
+            return 150
+        }
+    }
 }
 
-
-extension HomePageVC: UISearchBarDelegate{
+extension HomePageVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }

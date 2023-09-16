@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,10 +22,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if defaults.bool(forKey: "hasOnboarded") {
             // The user has seen the onboarding screen before, go directly to the main screen.
-            let storyboard = UIStoryboard(name: "RegisterVC", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC {
-                window.rootViewController = UINavigationController(rootViewController: vc)
+            if Auth.auth().currentUser == nil {
+                let storyboard = UIStoryboard(name: "RegisterVC", bundle: nil)
+                if let vc = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC {
+                    window.rootViewController = UINavigationController(rootViewController: vc)
+                }
+            }else{
+                let storyboard = UIStoryboard(name: "HomePageVC", bundle: nil)
+                if let vc = storyboard.instantiateViewController(withIdentifier: "MyTabbarController") as? MyTabbarController {
+                    window.rootViewController = UINavigationController(rootViewController: vc)
+                }
             }
+            
         } else {
             // The user has not seen the onboarding screen before, show the onboarding screen.
             let storyboard = UIStoryboard(name: "OnboardingVC", bundle: nil)
