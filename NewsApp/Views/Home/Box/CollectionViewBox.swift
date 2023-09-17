@@ -38,20 +38,20 @@ class CollectionViewBox: UIView {
     
     private func loadImage(from urlString: String?) {
             guard let urlString = urlString, let url = URL(string: urlString) else {
-                // URL geçersiz veya boş
                 return
             }
             
             URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
                 guard let data = data, error == nil, let image = UIImage(data: data) else {
-                    // Resim alınamadı
                     return
                 }
                 
                 // Resmi ana thread üzerinde güncelle
                 DispatchQueue.main.async {
                     self?.collectionViewImage.image = image
+                    self?.collectionViewImage.layer.cornerRadius = 20
                 }
             }.resume()
         }
+    
 }

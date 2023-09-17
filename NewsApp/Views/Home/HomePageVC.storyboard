@@ -28,53 +28,65 @@
                                 <rect key="frame" x="0.0" y="159" width="393" height="610"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FirstTableViewCell" rowHeight="256" id="Ti8-rG-pvq" customClass="FirstTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="256"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FirstTableViewCell" rowHeight="263" id="I8X-eb-jPd" customClass="FirstTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ti8-rG-pvq" id="vFw-PR-HWB">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I8X-eb-jPd" id="TQC-9y-M0b">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="263"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KS2-Wo-bv3">
-                                                    <rect key="frame" x="20" y="8" width="353" height="240"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-DA-Ppp" userLabel="View Box">
+                                                    <rect key="frame" x="8" y="8" width="377" height="247"/>
+                                                    <subviews>
+                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lWa-IH-c6a">
+                                                            <rect key="frame" x="8" y="0.0" width="361" height="247"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D9M-Il-xgL">
+                                                                <size key="itemSize" width="359" height="228"/>
+                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            </collectionViewFlowLayout>
+                                                            <cells>
+                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gY0-kk-hXW" customClass="HomeCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="9.6666666666666661" width="359" height="228"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QaS-ki-OZf" customClass="CollectionViewBox" customModule="NewsApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="228"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </collectionViewCellContentView>
+                                                                    <size key="customSize" width="359" height="228"/>
+                                                                    <connections>
+                                                                        <outlet property="collectionViewBox" destination="QaS-ki-OZf" id="z6D-xX-866"/>
+                                                                    </connections>
+                                                                </collectionViewCell>
+                                                            </cells>
+                                                        </collectionView>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQa-vz-vdL">
-                                                        <size key="itemSize" width="261" height="203"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="yW2-Eo-xhp" customClass="HomeCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
-                                                            <rect key="frame" x="46" y="0.0" width="261" height="203"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="arU-pZ-wtc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="261" height="203"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                            </collectionViewCellContentView>
-                                                            <size key="customSize" width="261" height="203"/>
-                                                            <connections>
-                                                                <outlet property="collectionViewBox" destination="arU-pZ-wtc" id="8jq-Fv-Dqy"/>
-                                                            </connections>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                </collectionView>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lWa-IH-c6a" secondAttribute="bottom" id="4qp-kB-yYL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lWa-IH-c6a" secondAttribute="trailing" constant="8" id="FSG-yh-OKu"/>
+                                                        <constraint firstItem="lWa-IH-c6a" firstAttribute="top" secondItem="vFn-DA-Ppp" secondAttribute="top" id="FbA-vi-jbV"/>
+                                                        <constraint firstItem="lWa-IH-c6a" firstAttribute="leading" secondItem="vFn-DA-Ppp" secondAttribute="leading" constant="8" id="um8-s2-hil"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="KS2-Wo-bv3" secondAttribute="bottom" constant="8" id="5DM-Ni-xB7"/>
-                                                <constraint firstAttribute="trailing" secondItem="KS2-Wo-bv3" secondAttribute="trailing" constant="20" symbolic="YES" id="PgS-e1-Rw1"/>
-                                                <constraint firstItem="KS2-Wo-bv3" firstAttribute="leading" secondItem="vFw-PR-HWB" secondAttribute="leading" constant="20" symbolic="YES" id="q5b-xS-oKl"/>
-                                                <constraint firstItem="KS2-Wo-bv3" firstAttribute="top" secondItem="vFw-PR-HWB" secondAttribute="top" constant="8" id="wlJ-uJ-LAa"/>
+                                                <constraint firstItem="vFn-DA-Ppp" firstAttribute="top" secondItem="TQC-9y-M0b" secondAttribute="top" constant="8" id="CzX-Ec-feb"/>
+                                                <constraint firstAttribute="trailing" secondItem="vFn-DA-Ppp" secondAttribute="trailing" constant="8" id="Haw-xD-3tj"/>
+                                                <constraint firstItem="vFn-DA-Ppp" firstAttribute="leading" secondItem="TQC-9y-M0b" secondAttribute="leading" constant="8" id="VAw-r3-AXc"/>
+                                                <constraint firstAttribute="bottom" secondItem="vFn-DA-Ppp" secondAttribute="bottom" constant="8" id="Vt5-Cr-MEP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="collectionView" destination="KS2-Wo-bv3" id="jO3-Ea-N1z"/>
+                                            <outlet property="collectionView" destination="lWa-IH-c6a" id="lUm-4V-sG2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SecondTableViewCell" rowHeight="219" id="IJa-4z-8M7" customClass="SecondTableViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="306" width="393" height="219"/>
+                                        <rect key="frame" x="0.0" y="313" width="393" height="219"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IJa-4z-8M7" id="XK0-sx-gZP">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="219"/>

@@ -52,9 +52,8 @@ enum Endpoint: EndpointProtocol {
     
     static let apiKey = "24b29964c70d4676b0c7d4d056402af9"
     
-    case getTopHeadlines(country: String)
+    case getTopHeadlines(sources: String)
     case getEverything(query: String?)
-    case search(query: String)
     
     var baseUrl: String {
         return "https://newsapi.org/v2/"
@@ -66,8 +65,7 @@ enum Endpoint: EndpointProtocol {
             return "top-headlines"
         case .getEverything:
             return "everything"
-        case .search(_):
-            return "everything"
+     
         }
     }
     
@@ -87,11 +85,8 @@ enum Endpoint: EndpointProtocol {
                 items.append(URLQueryItem(name: "q", value: query))
             }
             return items
-        case .getTopHeadlines(let country):
-            return [URLQueryItem(name: "country", value: country)]
-            
-        case .search(let query):
-            return [URLQueryItem(name: "q", value: query)]
+        case .getTopHeadlines(let sources):
+            return [URLQueryItem(name: "sources", value: sources)]
      
         }
     }

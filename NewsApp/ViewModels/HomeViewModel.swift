@@ -11,7 +11,7 @@ class HomeViewModel {
     
     
     func fetchTopHeadlines() {
-        let endpoint = Endpoint.getTopHeadlines(country: "tr")
+        let endpoint = Endpoint.getTopHeadlines(sources:"bbc-news")
         networkManager.fetchData(from: endpoint, responseType: NewsResponse.self) { [weak self] result in
             switch result {
             case .success(let response):
@@ -23,9 +23,6 @@ class HomeViewModel {
             }
         }
     }
-
-
-
     
     func fetchEverything(query: String?) {
         let endpoint = Endpoint.getEverything(query: query)

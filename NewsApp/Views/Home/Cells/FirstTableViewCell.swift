@@ -12,6 +12,7 @@ class FirstTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var articles: [Article] = []
+    let viewModel = HomeViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,7 @@ class FirstTableViewCell: UITableViewCell {
     }
 
     func configure(with article: [Article]) {
+        self.articles = article
         collectionView.reloadData()
     }
 
@@ -47,8 +49,29 @@ extension FirstTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionVi
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "DetailPageVC", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailPageVC") as? DetailPageVC {
+            detailVC.article = articles[indexPath.row]
+            if let navigationController = findNavigationController() {
+                navigationController.pushViewController(detailVC, animated: true)
+            }
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 296, height: 279)
+            return CGSize(width: 366, height: 228)
         }
     
+    private func findNavigationController() -> UINavigationController? {
+        var responder: UIResponder? = self
+        while let currentResponder = responder {
+            if let navigationController = currentResponder as? UINavigationController {
+                return navigationController
+            }
+            responder = currentResponder.next
+        }
+        return nil
+    }
 }

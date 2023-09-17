@@ -57,10 +57,12 @@ class HomePageVC: UIViewController{
     
 }
 
+//MARK: Tab Bar
 final class MyTabbarController: UITabBarController {
   
 }
 
+//MARK: TableView
 extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.everything.count + 1 // Top Headlines ve Everything için toplam hücre sayısı
@@ -70,7 +72,7 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
-            cell.configure(with: viewModel.topHeadlines) // Top Headlines verilerini gönder
+            cell.configure(with: viewModel.topHeadlines)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTableViewCell", for: indexPath) as! SecondTableViewCell
@@ -84,26 +86,27 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let storyboard = UIStoryboard(name: "DetailPageVC", bundle: nil)
-        if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailPageVC") as? DetailPageVC {
-            detailVC.article = viewModel.everything[indexPath.row - 1] // Haberi DetailPageVC'ye iletebilirsiniz
-            navigationController?.pushViewController(detailVC, animated: true)
-        }
+            if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailPageVC") as? DetailPageVC {
+                detailVC.article = viewModel.everything[indexPath.row - 1]
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
         
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.row{
         case 0:
-            return 500
+            return 263
     
         default:
             return 150
         }
     }
 }
-
+//MARK: Search Bar
 extension HomePageVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        viewModel.fetchEverything(query: searchText)
     }
 }
