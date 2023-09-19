@@ -25,5 +25,15 @@ struct Article: Codable {
         self.publishedAt = publishedAt
         self.author = author
     }
+    
+    init() {
+          self.title = ""
+          self.description = ""
+          self.url = ""
+          self.urlToImage = ""
+          self.publishedAt = ""
+          self.author = ""
+      }
+    
 }
 

@@ -12,7 +12,6 @@ class FirstTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var articles: [Article] = []
-    let viewModel = HomeViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,6 +57,10 @@ extension FirstTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionVi
                 navigationController.pushViewController(detailVC, animated: true)
             }
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 40
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

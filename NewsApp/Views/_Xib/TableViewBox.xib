@@ -51,6 +51,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="save_white"/>
+                    <connections>
+                        <action selector="saveBtnAct:" destination="-1" eventType="touchUpInside" id="v7j-0r-pKD"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-oc-MsY">
                     <rect key="frame" x="307.66666666666669" y="98" width="37.333333333333314" height="18"/>

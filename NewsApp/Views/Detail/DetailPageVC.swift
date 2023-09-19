@@ -16,6 +16,8 @@ class DetailPageVC: UIViewController {
     @IBOutlet weak var detailImageView: UIImageView!
     
     var article: Article?
+    var favoriteArticle: FavoriteModel?
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,16 @@ class DetailPageVC: UIViewController {
     }
     
     @IBAction func saveBtnAct(_ sender: Any) {
-    
-    }
+        print("detay buton tıklandı")
+           if let favoriteArticle = favoriteArticle {
+               FavoritesManager.shared.toggleFavoriteNews(favoriteArticle)
+               
+               if FavoritesManager.shared.getFavoriteNews().contains(where: { $0.title == favoriteArticle.title }) {
+                  
+                   print("Haber favorilere eklendi.")
+               } else {
+                   print("Haber favorilerden kaldırıldı.")
+               }
+           }
+       }
 }

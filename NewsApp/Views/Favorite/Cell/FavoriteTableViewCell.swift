@@ -21,5 +21,16 @@ class FavoriteTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func configure(with article: Article) {
+        favoriteTableViewBox.configure(with: article)
+    }
+    func configure(with article: FavoriteModel) {
+        favoriteTableViewBox.configure(with: article)
+    }
+    
+    private func setupTableViewCellBox() {
+        favoriteTableViewBox.frame = contentView.bounds
+            contentView.addSubview(favoriteTableViewBox)
 
+    }
 }

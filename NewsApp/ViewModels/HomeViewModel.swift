@@ -1,40 +1,26 @@
 import Foundation
 
 class HomeViewModel {
-    
-    var topHeadlines: [Article] = []
-    var everything: [Article] = []
-    private let networkManager = NetworkManager.shared
-    
-    // Verilerin güncellenmesini izlemek için
-    var onDataUpdate: (() -> Void)?
+
+    let request = NetworkRequest()
     
     
-    func fetchTopHeadlines() {
-        let endpoint = Endpoint.getTopHeadlines(sources:"bbc-news")
-        networkManager.fetchData(from: endpoint, responseType: NewsResponse.self) { [weak self] result in
-            switch result {
-            case .success(let response):
-                self?.topHeadlines = response.articles
-                self?.onDataUpdate?()
-                print("Top Headlines alındı. Toplam \(response.articles.count) makale.")
-            case .failure(let error):
-                print("Topheadlines data error: \(error)")
-            }
-        }
+    func getTopHeadlines() {
+        request.fetchTopHeadlines()
     }
     
-    func fetchEverything(query: String?) {
-        let endpoint = Endpoint.getEverything(query: query)
-        networkManager.fetchData(from: endpoint, responseType: NewsResponse.self) { [weak self] result in
-            switch result {
-            case .success(let response):
-                self?.everything = response.articles
-                self?.onDataUpdate?()
-            case .failure(let error):
-                print("Everything data error: \(error)")
-            }
-        }
+    func getEverything(){
+        request.fetchEverything(query: "general")
+    }
+
+    func getSearch(query: String?){
+        request.fetchEverything(query: query)
+    }
+    
+    func getNewsForCategory(_ category: Group?) {
+        let categoryQuery = category?.group.lowercased() // Kategori adını küçük harfe
+        request.fetchEverything(query: categoryQuery)
+        print(categoryQuery as Any)
     }
 
 }
