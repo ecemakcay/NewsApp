@@ -4,27 +4,36 @@ class FavoritePageVC: UIViewController {
     
     @IBOutlet weak var favoriteTableView: UITableView!
     
-    var favoriteArticles: [FavoriteModel] = []
+    var favoriteArticles: [Article] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareTableView()
+        favoriteArticles = FavoritesManager.shared.getFavoriteNews()
+        self.favoriteTableView.reloadData()
         
-        let favoriteArticle = FavoritesManager.shared.getFavoriteNews()
-                print(favoriteArticle)
+        print("Favori haber sayısı: \(favoriteArticles.count)")
         
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        
+         favoriteArticles = FavoritesManager.shared.getFavoriteNews()
+         favoriteTableView.reloadData()
+         
+         print("Favori haber sayısı: \(favoriteArticles.count)")
+     }
     
     func prepareTableView(){
         favoriteTableView.delegate = self
         favoriteTableView.dataSource = self
     }
-    
   
 }
 
-extension FavoritePageVC: UITableViewDelegate, UITableViewDataSource{
+extension FavoritePageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoriteArticles.count
     }
@@ -41,6 +50,5 @@ extension FavoritePageVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-
     
 }

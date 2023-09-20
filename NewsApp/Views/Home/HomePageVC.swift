@@ -41,7 +41,6 @@ class HomePageVC: UIViewController{
         viewModel.getNewsForCategory(selectedCategory)
         viewModel.getTopHeadlines()
                 
-        // Verilerin güncellenmesini dinlemek için
         viewModel.request.onDataUpdate = { [weak self] in
             DispatchQueue.main.async {
                 self?.homeTableView.reloadData()

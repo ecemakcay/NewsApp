@@ -18,7 +18,7 @@ class HomeViewModel {
     }
     
     func getNewsForCategory(_ category: Group?) {
-        let categoryQuery = category?.group.lowercased() // Kategori adını küçük harfe
+        let categoryQuery = category?.group.lowercased() 
         request.fetchEverything(query: categoryQuery)
         print(categoryQuery as Any)
     }

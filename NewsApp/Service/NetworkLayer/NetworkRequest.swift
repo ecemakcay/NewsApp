@@ -12,10 +12,8 @@ class NetworkRequest{
     var topHeadlines: [Article] = []
     var everything: [Article] = []
     private let networkManager = NetworkManager.shared
-    
-    // Verilerin güncellenmesini izlemek için
+
     var onDataUpdate: (() -> Void)?
-    
     
     func fetchTopHeadlines() {
         let endpoint = Endpoint.getTopHeadlines(sources:"bbc-news")

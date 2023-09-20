@@ -16,22 +16,20 @@ class DetailPageVC: UIViewController {
     @IBOutlet weak var detailImageView: UIImageView!
     
     var article: Article?
-    var favoriteArticle: FavoriteModel?
-   
     
+    let viewModel = DetailViewModel()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         saveBtn.layer.cornerRadius = 10
         detailTitleLabel.layer.cornerRadius = 15
-        
     
         if let article = article {
             detailAuthorLabel.text = "By \(article.author ?? "Unknow")"
             detailDescriptionLabel.text = article.description ?? ""
             detailTitleLabel.text = article.title
             
-           
             if let imageUrl = article.urlToImage, let url = URL(string: imageUrl) {
                 let session = URLSession.shared
                 let task = session.dataTask(with: url) { (data, response, error) in
@@ -48,21 +46,10 @@ class DetailPageVC: UIViewController {
                 }
                 task.resume()
             }
-
         }
     }
     
     @IBAction func saveBtnAct(_ sender: Any) {
-        print("detay buton tıklandı")
-           if let favoriteArticle = favoriteArticle {
-               FavoritesManager.shared.toggleFavoriteNews(favoriteArticle)
-               
-               if FavoritesManager.shared.getFavoriteNews().contains(where: { $0.title == favoriteArticle.title }) {
-                  
-                   print("Haber favorilere eklendi.")
-               } else {
-                   print("Haber favorilerden kaldırıldı.")
-               }
-           }
-       }
+        viewModel.saveBtnAct(article: article)
+    }
 }

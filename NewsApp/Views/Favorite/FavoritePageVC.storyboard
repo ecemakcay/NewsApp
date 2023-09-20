@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorite-->
+        <!--FAVORİTES-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController restorationIdentifier="FavoritePageVC" storyboardIdentifier="FavoritePageVC" id="Y6W-OH-hqX" customClass="FavoritePageVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,12 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Xk-hT-Erk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Xk-hT-Erk">
                                 <rect key="frame" x="0.0" y="103" width="393" height="683"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoriteTableViewCell" rowHeight="219" id="uhM-lo-lz5" customClass="FavoriteTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FavoriteTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoriteTableViewCell" rowHeight="219" id="uhM-lo-lz5" customClass="FavoriteTableViewCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="219"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uhM-lo-lz5" id="MwB-Ju-Nwb" customClass="TableViewBox" customModule="NewsApp" customModuleProvider="target">
@@ -30,7 +29,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="favoriteTableViewBox" destination="MwB-Ju-Nwb" id="Igz-79-wa2"/>
+                                            <outlet property="favoriteTableViewBox" destination="MwB-Ju-Nwb" id="gSp-bb-8bs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -38,12 +37,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="color2"/>
+                        <constraints>
+                            <constraint firstItem="9Xk-hT-Erk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5Qs-AR-B2B"/>
+                            <constraint firstItem="9Xk-hT-Erk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ElG-ev-nMK"/>
+                            <constraint firstItem="9Xk-hT-Erk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="LPw-Yd-vyB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="9Xk-hT-Erk" secondAttribute="bottom" constant="-17" id="uVW-4n-LaW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" image="heart" selectedImage="heart_selected" id="DBs-fm-gt2"/>
-                    <navigationItem key="navigationItem" id="Rdh-Up-7jx"/>
+                    <navigationItem key="navigationItem" title="FAVORİTES" id="Rdh-Up-7jx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favoriteTableView" destination="9Xk-hT-Erk" id="Twn-j8-Wpu"/>
+                        <outlet property="favoriteTableView" destination="9Xk-hT-Erk" id="Fli-Nh-9R4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -55,9 +60,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HDq-Rl-ICh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g8a-OK-Uh3">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="g8a-OK-Uh3">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="color5"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="color5"/>
+                            <color key="textShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -74,6 +86,9 @@
         <image name="heart_selected" width="32" height="32"/>
         <namedColor name="color2">
             <color red="0.10588235294117647" green="0.14901960784313725" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color5">
+            <color red="0.8784313725490196" green="0.88235294117647056" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

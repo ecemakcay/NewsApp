@@ -8,38 +8,40 @@
 import Foundation
 
 class FavoritesManager {
-    static let shared = FavoritesManager() // Singleton oluşturuyoruz
+    static let shared = FavoritesManager()
+    let favoriKey: String = "favoriteNews"
 
-    private init() {} // Singleton yapısı için private bir initializer
+    private init() {}
 
-    private var favoriteArticles: [FavoriteModel] = []
+    private var favoriteArticles: [Article] = []
 
-    // Favori haberleri yükle
     func loadFavoriteNews() {
-        if let newsData = UserDefaults.standard.data(forKey: "favoriteNews"),
-           let favoriteArticles = try? JSONDecoder().decode([FavoriteModel].self, from: newsData) {
-            self.favoriteArticles = favoriteArticles
+        if let newsData = UserDefaults.standard.data(forKey: favoriKey) {
+            do {
+                let favoriteArticles = try JSONDecoder().decode([Article].self, from: newsData)
+                self.favoriteArticles = favoriteArticles
+                print("FAVORİTE ARTİCLES DECODED")
+            } catch {
+                print("DECODİNG ERROR: \(error)")
+            }
         }
     }
 
-    // Bir haberi favorilere ekle veya kaldır
-    func toggleFavoriteNews(_ article: FavoriteModel) {
+    func toggleFavoriteNews(_ article: Article) {
         if let index = favoriteArticles.firstIndex(where: { $0.title == article.title }) {
-            // Haber favorilerde zaten varsa, kaldır
+            print("favoriden kaldırıldı")
             favoriteArticles.remove(at: index)
         } else {
-            // Haber favorilerde yoksa, ekle
+            print("favoriye eklendi")
             favoriteArticles.append(article)
         }
 
-        // Favori haberleri UserDefaults ile sakla
         if let newsData = try? JSONEncoder().encode(favoriteArticles) {
-            UserDefaults.standard.set(newsData, forKey: "favoriteNews")
+            UserDefaults.standard.set(newsData, forKey: favoriKey)
         }
     }
 
-    // Favori haberleri getir
-    func getFavoriteNews() -> [FavoriteModel] {
+    func getFavoriteNews() -> [Article] {
         return favoriteArticles
     }
 }

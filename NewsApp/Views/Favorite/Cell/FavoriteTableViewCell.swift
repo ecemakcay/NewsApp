@@ -13,7 +13,7 @@ class FavoriteTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupTableViewCellBox()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,9 +22,6 @@ class FavoriteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func configure(with article: Article) {
-        favoriteTableViewBox.configure(with: article)
-    }
-    func configure(with article: FavoriteModel) {
         favoriteTableViewBox.configure(with: article)
     }
     

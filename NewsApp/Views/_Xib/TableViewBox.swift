@@ -7,7 +7,7 @@ class TableViewBox: UIView {
     @IBOutlet weak var tableViewBoxImage: UIImageView!
     
     var article: Article?
-    var favoriteArticle: FavoriteModel?
+    var favoriteArticle: Article?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,18 +21,18 @@ class TableViewBox: UIView {
     
     @IBAction func saveBtnAct(_ sender: Any) {
         print("tableview buton tıklandı")
-        if let favoriteArticle = favoriteArticle {
-            FavoritesManager.shared.toggleFavoriteNews(favoriteArticle)
-         
-            if FavoritesManager.shared.getFavoriteNews().contains(where: { $0.title == favoriteArticle.title }) {
-    
+        if let article = article {
+            FavoritesManager.shared.toggleFavoriteNews(article)
+            
+            if FavoritesManager.shared.getFavoriteNews().contains(where: { $0.title == article.title }) {
                 print("Haber favorilere eklendi.")
             } else {
-                // Haber favorilerden kaldırıldı
                 print("Haber favorilerden kaldırıldı.")
             }
         }
     }
+
+
     
     private func setupView() {
         if let viewForXib = Bundle.main.loadNibNamed("TableViewBox", owner: self)?[0] as? UIView {
@@ -57,19 +57,12 @@ class TableViewBox: UIView {
         }
     }
     
-    func configure(with article: Article) {
-        tableViewBoxTitle.text = article.title
-        dateFormatter(article: article)
-        loadImage(from: article.urlToImage)
-        self.frame = CGRect(x: 0, y: 0, width: 355, height: 130)
-        
-    }
-    
-    func configure(with article: FavoriteModel) {
-        tableViewBoxTitle.text = article.title
-        
-        loadImage(from: article.urlToImage)
-        self.frame = CGRect(x: 0, y: 0, width: 355, height: 130)
+    func configure(with article: Article?) {
+        self.article = article
+        tableViewBoxTitle.text = article?.title
+        dateFormatter(article: article!)
+        loadImage(from: article?.urlToImage)
+        self.frame = CGRect(x: 10, y: 10, width: 355, height: 130)
         
     }
     

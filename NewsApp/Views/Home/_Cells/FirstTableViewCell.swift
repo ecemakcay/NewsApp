@@ -19,6 +19,7 @@ class FirstTableViewCell: UITableViewCell {
 
         let design = UICollectionViewFlowLayout()
         design.scrollDirection = .horizontal
+        design.sectionInset = UIEdgeInsets(top: 30, left: 15, bottom: 30, right: 15)
         collectionView.collectionViewLayout = design
     }
 

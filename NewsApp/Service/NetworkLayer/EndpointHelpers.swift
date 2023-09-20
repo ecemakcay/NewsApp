@@ -50,7 +50,7 @@ extension EndpointProtocol {
 
 enum Endpoint: EndpointProtocol {
     
-    static let apiKey = ""
+    static let apiKey = "40b218b9431740f59b200eb5dd1fdb3d"
     
     case getTopHeadlines(sources: String)
     case getEverything(query: String?)
