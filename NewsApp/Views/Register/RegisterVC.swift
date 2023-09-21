@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterVC: UIViewController{
     
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var passwordLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
     
@@ -17,6 +19,24 @@ class RegisterVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBackground()
+        setUpBtn()
+        setUpTitleView()
+    }
+    
+    
+    func setUpBtn(){
+        registerBtn.layer.cornerRadius = 15
+        registerBtn.layer.borderWidth = 1
+        registerBtn.layer.borderColor = UIColor.black.cgColor
+        
+    }
+    
+    func setUpTitleView(){
+        titleView.layer.cornerRadius = 30
+        titleView.layer.borderWidth = 1
+        titleView.layer.borderColor = UIColor.black.cgColor
+//        titleView.alpha = 0.7
+        
     }
     
     @IBAction func registerBtnAct(_ sender: Any) {

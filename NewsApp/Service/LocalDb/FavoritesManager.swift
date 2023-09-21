@@ -29,10 +29,10 @@ class FavoritesManager {
 
     func toggleFavoriteNews(_ article: Article) {
         if let index = favoriteArticles.firstIndex(where: { $0.title == article.title }) {
-            print("favoriden kaldırıldı")
+            print("favorite removed")
             favoriteArticles.remove(at: index)
         } else {
-            print("favoriye eklendi")
+            print("favorite added")
             favoriteArticles.append(article)
         }
 
@@ -43,5 +43,15 @@ class FavoritesManager {
 
     func getFavoriteNews() -> [Article] {
         return favoriteArticles
+    }
+    
+    func deleteFavorite(_ article: Article){
+        if let index = favoriteArticles.firstIndex(where: { $0.title == article.title }) {
+            print("favorite removed")
+            favoriteArticles.remove(at: index)
+        }
+        if let newsData = try? JSONEncoder().encode(favoriteArticles) {
+            UserDefaults.standard.set(newsData, forKey: favoriKey)
+        }
     }
 }

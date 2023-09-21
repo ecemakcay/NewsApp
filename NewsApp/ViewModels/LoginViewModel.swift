@@ -25,4 +25,22 @@ class LoginViewModel{
             completion(.failure(error))
         }
     }
+    func getUser() -> String{
+        let user = Auth.auth().currentUser
+        return user?.email ?? ""
+    }
+    
+    func logout() -> Bool{
+        let islogin : Bool = true
+       
+            let firebaseAuth = Auth.auth()
+            do {
+              try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+              print("Error signing out: %@", signOutError)
+                return false
+            }
+        return islogin
+    }
+    
 }

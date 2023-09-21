@@ -56,6 +56,7 @@
 		DEBB58582AB7318000B3787D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB58572AB7318000B3787D /* FavoriteTableViewCell.swift */; };
 		DEBB585C2AB74F2C00B3787D /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB585B2AB74F2C00B3787D /* FavoritesManager.swift */; };
 		DEEBE0692ABB012300ADD186 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEBE0682ABB012200ADD186 /* DetailViewModel.swift */; };
+		DEF46FD42ABC7F290024B854 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF46FD32ABC7F290024B854 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		DEBB58572AB7318000B3787D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		DEBB585B2AB74F2C00B3787D /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		DEEBE0682ABB012200ADD186 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		DEF46FD32ABC7F290024B854 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				DE1B0BD32AB1F1F00044761C /* HomeViewModel.swift */,
 				DE994B342AB97BDC00F01AA4 /* SearchViewModel.swift */,
 				DEEBE0682ABB012200ADD186 /* DetailViewModel.swift */,
+				DEF46FD32ABC7F290024B854 /* FavoriteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				DE994B332AB9787F00F01AA4 /* SearchTableViewCell.swift in Sources */,
 				DE8651B82AAE44A0002A8189 /* FirstTableViewCell.swift in Sources */,
 				DEBA502D2AAEDC92005EAE29 /* HomeCollectionViewCell.swift in Sources */,
+				DEF46FD42ABC7F290024B854 /* FavoriteViewModel.swift in Sources */,
 				DE1B0BCE2AB1E6CB0044761C /* EndpointHelpers.swift in Sources */,
 				DEB91C452AA9FA5B00C359FF /* LoginVC.swift in Sources */,
 				DEBB1B9E2AB455D0006C2AB6 /* NewResponse.swift in Sources */,

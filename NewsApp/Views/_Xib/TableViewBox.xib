@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewBox" customModule="NewsApp" customModuleProvider="target">
             <connections>
                 <outlet property="publishedAtLabel" destination="8VL-oc-MsY" id="MYH-jf-WX6"/>
+                <outlet property="saveBtn" destination="nRi-ua-yQe" id="YaS-0x-YWJ"/>
                 <outlet property="tableViewBoxImage" destination="iQ3-Uf-2eY" id="RDe-4j-PVC"/>
                 <outlet property="tableViewBoxTitle" destination="JFe-v0-eIH" id="teD-WN-44l"/>
             </connections>

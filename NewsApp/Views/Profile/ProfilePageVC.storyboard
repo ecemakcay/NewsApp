@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,12 +15,65 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDd-oI-Yn9">
+                                <rect key="frame" x="136" y="528" width="121" height="37"/>
+                                <color key="backgroundColor" name="color4"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SİGN OUT">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signOutBtnAct:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="51y-cR-xG1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XF-C3-26j">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-Bw-jOs">
+                                        <rect key="frame" x="170.66666666666666" y="343" width="52" height="26.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="W3W-dp-6GL">
+                                        <rect key="frame" x="96" y="136" width="201" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="8Xv-Ay-8XV"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="color4"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="E3H-Bw-jOs" secondAttribute="bottom" constant="30.670000000000002" id="5wM-Xf-iu4"/>
+                                    <constraint firstItem="E3H-Bw-jOs" firstAttribute="top" secondItem="W3W-dp-6GL" secondAttribute="bottom" constant="79" id="aWW-xd-qLZ"/>
+                                    <constraint firstItem="E3H-Bw-jOs" firstAttribute="centerX" secondItem="2XF-C3-26j" secondAttribute="centerX" id="cPn-Lc-rv7"/>
+                                    <constraint firstItem="W3W-dp-6GL" firstAttribute="centerX" secondItem="2XF-C3-26j" secondAttribute="centerX" id="g6F-3T-OfX"/>
+                                    <constraint firstItem="W3W-dp-6GL" firstAttribute="leading" secondItem="2XF-C3-26j" secondAttribute="leading" constant="96" id="gU5-aF-XFz"/>
+                                    <constraint firstItem="W3W-dp-6GL" firstAttribute="centerY" secondItem="2XF-C3-26j" secondAttribute="centerY" id="lte-Mm-HX3"/>
+                                    <constraint firstAttribute="height" constant="400" id="y6q-Yr-dC2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="color2"/>
+                        <constraints>
+                            <constraint firstItem="2XF-C3-26j" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7EM-8n-lny"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZDd-oI-Yn9" secondAttribute="bottom" constant="204" id="Oxa-us-dst"/>
+                            <constraint firstItem="2XF-C3-26j" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="iID-fY-lc4"/>
+                            <constraint firstItem="2XF-C3-26j" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jKE-Hj-dgV"/>
+                            <constraint firstItem="ZDd-oI-Yn9" firstAttribute="centerX" secondItem="2XF-C3-26j" secondAttribute="centerX" id="rVL-uW-Hyn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="user" selectedImage="user_selected" id="xAw-w4-dBk"/>
                     <navigationItem key="navigationItem" id="hRb-Vp-sdd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailLayer" destination="E3H-Bw-jOs" id="49v-3F-rop"/>
+                        <outlet property="profilView" destination="2XF-C3-26j" id="RLN-gr-9UU"/>
+                        <outlet property="signOutBtn" destination="ZDd-oI-Yn9" id="NmO-lO-dfa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,10 +99,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="profile" width="256" height="256"/>
         <image name="user" width="32" height="32"/>
         <image name="user_selected" width="32" height="32"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="color2">
+            <color red="0.10588235294117647" green="0.14901960784313725" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color4">
+            <color red="0.46666666666666667" green="0.55294117647058827" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

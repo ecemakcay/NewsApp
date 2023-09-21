@@ -16,15 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="aC4-Jc-cMI">
-                                <rect key="frame" x="0.0" y="67" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Knu-BK-PHB"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cpL-eq-rFd">
-                                <rect key="frame" x="0.0" y="123" width="393" height="646"/>
+                                <rect key="frame" x="0.0" y="239" width="393" height="530"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchTableViewCell" rowHeight="219" id="dsh-h9-l2u" customClass="SearchTableViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -41,13 +34,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyh-B4-S6a">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-wM-5wy">
+                                        <rect key="frame" x="146" y="88" width="101.33333333333331" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="color4"/>
+                                <constraints>
+                                    <constraint firstItem="HJ9-wM-5wy" firstAttribute="centerX" secondItem="Vyh-B4-S6a" secondAttribute="centerX" id="1t1-nJ-ge8"/>
+                                    <constraint firstAttribute="height" constant="126" id="8S3-Bb-5gP"/>
+                                    <constraint firstAttribute="bottom" secondItem="HJ9-wM-5wy" secondAttribute="bottom" constant="8" id="L9Z-3R-oj9"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="aC4-Jc-cMI">
+                                <rect key="frame" x="0.0" y="155" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Knu-BK-PHB"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="color2"/>
                         <constraints>
                             <constraint firstItem="aC4-Jc-cMI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="325-zy-hdf"/>
-                            <constraint firstItem="cpL-eq-rFd" firstAttribute="top" secondItem="aC4-Jc-cMI" secondAttribute="bottom" id="743-7g-drj"/>
-                            <constraint firstItem="aC4-Jc-cMI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="KZX-Pd-c0Q"/>
+                            <constraint firstItem="aC4-Jc-cMI" firstAttribute="top" secondItem="Vyh-B4-S6a" secondAttribute="bottom" constant="29" id="40V-I0-qdp"/>
+                            <constraint firstItem="cpL-eq-rFd" firstAttribute="top" secondItem="aC4-Jc-cMI" secondAttribute="bottom" constant="28" id="743-7g-drj"/>
+                            <constraint firstItem="Vyh-B4-S6a" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="IpK-oj-gkk"/>
+                            <constraint firstItem="Vyh-B4-S6a" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="MB1-sX-w3k"/>
+                            <constraint firstItem="Vyh-B4-S6a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MP4-kl-V53"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cpL-eq-rFd" secondAttribute="bottom" id="b6Y-S3-yqO"/>
                             <constraint firstItem="aC4-Jc-cMI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="c5x-Y3-ze7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cpL-eq-rFd" secondAttribute="trailing" id="kX1-FD-LSh"/>
@@ -59,17 +79,21 @@
                     <connections>
                         <outlet property="searchBar" destination="aC4-Jc-cMI" id="Sgi-fx-RVw"/>
                         <outlet property="searchTableView" destination="cpL-eq-rFd" id="Gc6-4U-i15"/>
+                        <outlet property="topView" destination="Vyh-B4-S6a" id="8Rf-Xb-Ggm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="-27"/>
+            <point key="canvasLocation" x="9.9236641221374047" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
         <image name="search" width="24" height="24"/>
         <namedColor name="color2">
             <color red="0.10588235294117647" green="0.14901960784313725" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color4">
+            <color red="0.46666666666666667" green="0.55294117647058827" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

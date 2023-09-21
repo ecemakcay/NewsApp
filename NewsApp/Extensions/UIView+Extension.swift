@@ -17,6 +17,7 @@ extension UIView {
         
         let imageViewBackground = UIImageView(frame: CGRectMake(0, 0, width, height))
         imageViewBackground.image = UIImage(named: "space")
+        imageViewBackground.alpha = 0.4
         
         // you can change the content mode:
         imageViewBackground.contentMode = UIView.ContentMode.scaleAspectFill

@@ -163,7 +163,6 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="By2-Wc-EWq" secondAttribute="bottom" id="3mL-nA-CIL"/>
                             <constraint firstItem="By2-Wc-EWq" firstAttribute="leading" secondItem="Mcq-Kx-I0s" secondAttribute="leading" constant="-280" id="684-TO-Wtl"/>
-                            <constraint firstItem="478-qI-ycf" firstAttribute="top" secondItem="Mcq-Kx-I0s" secondAttribute="top" id="8WW-Mx-Ejz"/>
                             <constraint firstItem="Mcq-Kx-I0s" firstAttribute="top" secondItem="By2-Wc-EWq" secondAttribute="top" constant="59" id="9op-Ms-Ng8"/>
                             <constraint firstItem="Mcq-Kx-I0s" firstAttribute="trailing" secondItem="Lqq-Tk-PJ8" secondAttribute="trailing" id="DLK-VV-ZTf"/>
                             <constraint firstItem="478-qI-ycf" firstAttribute="top" secondItem="Mcq-Kx-I0s" secondAttribute="top" constant="63" id="E2N-ws-4nI"/>

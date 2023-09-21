@@ -30,7 +30,7 @@ class HomePageVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addBackground()
         titleLabel.text = "NEWS"
         
         self.backViewForSideMenu.isHidden = true
@@ -118,6 +118,7 @@ extension HomePageVC: SideMenuVCDelegate{
         selectedCategory = category
         hideSideView()
         titleLabel.isHidden = false
+        
     }
 }
 

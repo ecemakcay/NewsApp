@@ -21,10 +21,11 @@ class DetailPageVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addBackground()
         saveBtn.layer.cornerRadius = 10
         detailTitleLabel.layer.cornerRadius = 15
-    
+        updateSaveButton()
+        
         if let article = article {
             detailAuthorLabel.text = "By \(article.author ?? "Unknow")"
             detailDescriptionLabel.text = article.description ?? ""
@@ -51,5 +52,21 @@ class DetailPageVC: UIViewController {
     
     @IBAction func saveBtnAct(_ sender: Any) {
         viewModel.saveBtnAct(article: article)
+        updateSaveButton()
+    }
+    
+    func updateBtnImage(with newImage: UIImage) {
+        saveBtn.setImage(newImage, for: .normal)
+    }
+    
+    private func updateSaveButton() {
+        guard let article = article else {
+            return
+        }
+        if FavoritesManager.shared.getFavoriteNews().contains(where: { $0.title == article.title }) {
+            updateBtnImage(with: UIImage(named: "detail_save")!)
+        } else {
+            updateBtnImage(with: UIImage(named: "save") ?? .add)
+        }
     }
 }

@@ -10,17 +10,20 @@ import UIKit
 class SearchPageVC: UIViewController {
 
     @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     let viewModel = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addBackground()
         prepareSearchBar()
         prepareTableView()
         configureSearchBarColors()
     
+        topView.layer.cornerRadius = 20
+        
         viewModel.request.onDataUpdate = { [weak self] in
             DispatchQueue.main.async {
                 self?.searchTableView.reloadData()
